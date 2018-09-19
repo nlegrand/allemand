@@ -1,0 +1,45 @@
+\documentclass[a5paper, 10pt]{article}
+\usepackage[bottom=2cm, top=2cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{fontspec}
+
+\setmainfont{Tinos}
+\setsansfont{Arimo}
+\setmonofont{Cousine}
+
+\usepackage{titlesec}
+\newfontfamily\headingfont[]{Arimo}
+\titleformat*{\section}{\bf\LARGE\headingfont}
+\titleformat*{\subsection}{\bf\Large\headingfont}
+
+%\usepackage[rldocument,extrafootnotefeatures]{bidi}
+\usepackage{multicol}
+\setlength\columnsep{0.8cm}
+\setlength{\parindent}{0pt}
+
+\newcommand{\lexi}[2]{{\raggedleft\textbf{\textsf{#1}}\hfill{#2}\par}}
+\newcommand{\femi}[0]{\textit{f}}
+\newcommand{\masc}[0]{\textit{m}}
+\newcommand{\parti}[0]{\textit{participe}}
+\newcommand{\ак}[0]{\char"0301} %accent tonique (accent aigue sur voyelle)
+
+% No I'm not ashamed of this horrible title hack, that's exactly where
+% I hate LaTeX :)
+\title{\vskip -4em\bf\Huge\headingfont Lexikon}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{multicols}{2}
+  \subsection*{A}
+  
+
+  \lexi{Anrufer, des (-)}{personne qui appelle}
+  \lexi{aus}{de}
+  \subsection*{B}
+  \lexi{bitte}{s'il te/vous plaît}
+  \subsection*{D}
+  \lexi{danke}{merci}
+
+\end{multicols}
+\end{document}
